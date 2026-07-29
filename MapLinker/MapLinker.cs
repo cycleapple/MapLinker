@@ -72,7 +72,7 @@ namespace MapLinker
             Config = pluginInterface.GetPluginConfig() as Configuration ?? new Configuration();
             CommandManager.AddHandler("/maplink", new CommandInfo(CommandHandler)
             {
-                HelpMessage = "/maplink - open the maplink panel."
+                HelpMessage = "/maplink－開啟地圖連結面板。"
             });
             Gui = new PluginUi(this);
             PluginLog = pluginLog;

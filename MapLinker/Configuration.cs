@@ -16,7 +16,7 @@ namespace MapLinker
         public bool ShowTooltips = true;
         public bool FilterDuplicates = false;
         public bool UseFloatingWindow;
-        public string UILanguage = "en";
+        public string UILanguage = "zh-TW";
         public List<MapLinkMessage> MapLinkMessageList = new List<MapLinkMessage>();
 
         public bool Recording = true;

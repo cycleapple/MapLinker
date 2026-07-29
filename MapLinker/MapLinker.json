@@ -1,8 +1,8 @@
 {
   "Name": "MapLinker",
   "Author": "Bluefissure",
-  "Punchline": "Record the maplinks in chat",
-  "Description": "Automatically record the maplinks in chat and retrieval later.",
+  "Punchline": "記錄並整理聊天中的地圖連結。",
+  "Description": "自動記錄聊天頻道中的地圖連結，並可在之後搜尋與重新開啟。",
   "RepoUrl": "https://github.com/cycleapple/MapLinker/tree/api13-tw",
   "IconUrl": "https://raw.githubusercontent.com/Bluefissure/MapLinker/master/images/icon.png"
 }

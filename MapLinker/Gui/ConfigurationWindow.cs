@@ -31,7 +31,8 @@ namespace MapLinker.Gui
 
         public ConfigurationWindow(MapLinker plugin) : base(plugin)
         {
-            _languageList = new string[] { "en", "zh" };
+            _languageList = new string[] { "English", "繁體中文" };
+            _selectedLanguage = Config.UILanguage.StartsWith("zh", StringComparison.OrdinalIgnoreCase) ? 1 : 0;
             _localizer = new Localizer(Config.UILanguage);
         }
 
@@ -125,7 +126,7 @@ namespace MapLinker.Gui
             ImGui.SetNextItemWidth(200);
             if (ImGui.Combo("##hideLangSetting", ref _selectedLanguage, _languageList, _languageList.Length))
             {
-                Config.UILanguage = _languageList[_selectedLanguage];
+                Config.UILanguage = _selectedLanguage == 1 ? "zh-TW" : "en";
                 _localizer.Language = Config.UILanguage;
                 Config.Save();
             }
@@ -258,7 +259,7 @@ namespace MapLinker.Gui
                     text += $"{maplinkMessage.Sender}|{maplinkMessage.Text}|{maplinkMessage.RecordTime}\n";
                 }
                 ImGui.SetClipboardText(text.Trim());
-                Plugin.ChatGui.Print($"{listToDisplay.Count()} maplinks were copied to clickboard.");
+                Plugin.ChatGui.Print($"已將 {listToDisplay.Count()} 筆地圖連結複製到剪貼簿。");
             }
 
         }
